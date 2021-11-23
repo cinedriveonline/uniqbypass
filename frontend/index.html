@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UNIQ.edu.mx bypass ads</title>
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    </head>
+    <body onhashchange='document.getElementById("url").value = window.location.hash.substring(1); bypass();'>
+        <h2>UNIQ.edu.mx bypass</h2>
+        <p>Bypass para links en la web.</p>
+        <noscript>
+            <i>
+                Unfortunately, Javascript needs to be enabled to test this site.
+                Either you need to enable it or learn to use the <a href="https://github.com/normanlol/lilypad#api-endpoints">API Endpoints</a>.
+            </i>
+        </noscript>
+        <div id="reqScript" style="display:none;">
+            <input autocomplete="off" placeholder="Put URL here." id="url">
+            <button onclick="bypass()">Bypass</button>
+            <p id="loading" style="display:none;">Cargando...</p>
+            <p id="success" style="display:none;">Link original: <a rel="noreferrer" id="link"></a></p>
+            <p id="fail" style="display:none;">Error: <i style="color:red;" id="errTxt"></i></p>
+            <div id="isCache" style="display:none;">
+                <br>
+                <p>Result inaccurate? </p>
+                <button onclick="bypass('1')">Click me to retry</button>
+                <br>
+            </div>
+        </div>
+        <i>Codigo abierto tutorial aqui <a rel="noreferrer" href="https://uniq.edu.mx/bypass-url-heroku-app-saltar-publicidad-acortadores">UNIQ.edu.mx</a>.</i>
+    </body>
+    <script src="app.js"></script>
+</html>
